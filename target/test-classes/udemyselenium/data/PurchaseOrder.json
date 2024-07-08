@@ -1,0 +1,12 @@
+[
+    {
+        "email" : "usersatu@mailinator.com",
+		"password" : "!Test1234",
+		"product" : "ZARA COAT 3"
+    },
+    {
+        "email" : "userdua@mailinator.com",
+		"password" : "!Test1234",
+		"product" : "ADIDAS ORIGINAL"
+    }
+]
