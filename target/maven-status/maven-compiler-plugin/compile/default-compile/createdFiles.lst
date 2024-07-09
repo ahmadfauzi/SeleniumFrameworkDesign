@@ -1,0 +1,7 @@
+udemyselenium\pageobjects\CartPage.class
+udemyselenium\abstractcomponents\AbstractComponent.class
+udemyselenium\pageobjects\ProductCatalog.class
+udemyselenium\pageobjects\CheckoutPage.class
+udemyselenium\pageobjects\LandingPage.class
+udemyselenium\pageobjects\OrderPage.class
+udemyselenium\pageobjects\ConfirmationPage.class
