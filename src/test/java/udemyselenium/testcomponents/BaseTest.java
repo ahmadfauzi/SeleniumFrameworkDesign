@@ -13,8 +13,11 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -69,6 +72,17 @@ public class BaseTest {
 		
 		//{map, map}
 	}
+	
+	public String  getScreenshot(String testCaseName, WebDriver driver) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		//File file = new File("D:\\Eclipse-Workspace\\SeleniumFrameworkDesign\\" +"reports\\" + testCaseName + ".png");
+		File file = new File(System.getProperty("user.dir") +"\\reports\\" + testCaseName + ".png");
+		FileUtils.copyFile(source, file);
+		//return "D:\\Eclipse-Workspace\\SeleniumFrameworkDesign\\" +"reports\\" + testCaseName + ".png";
+		return System.getProperty("user.dir") +"\\reports\\" + testCaseName + ".png";
+	}
+	
 	
 	@BeforeMethod(alwaysRun=true)
 	public LandingPage launchApplication() throws IOException {

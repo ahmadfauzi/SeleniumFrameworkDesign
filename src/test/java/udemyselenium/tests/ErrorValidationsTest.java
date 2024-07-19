@@ -18,10 +18,10 @@ public class ErrorValidationsTest extends BaseTest{
 	@Test (groups = {"ErrorHandling"})
 	public void LoginErrorValidation() throws IOException, InterruptedException{
 				
-		landingPage.loginApplication("usersatu@mailinator.com", "!Test123");
+		landingPage.loginApplication("usersatu@mailinator.com", "!Test1234");
 			
 		Assert.assertEquals("Incorrect email or password.", landingPage.getErrorMessage());
-	}
+	} 
 	
 	@Test
 	public void ProductErrorValidation() throws IOException, InterruptedException{

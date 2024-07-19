@@ -53,14 +53,6 @@ public class SubmitOrderTest extends BaseTest{
 		Assert.assertTrue(orderPage.VerifyOrderDisplay(productName));	
 	}
 	
-	public String  getScreenshot(String testCaseName) throws IOException {
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File source = ts.getScreenshotAs(OutputType.FILE);
-		File file = new File("D:\\Eclipse-Workspace\\SeleniumFrameworkDesign\\" +"reports\\" + testCaseName + ".png");
-		FileUtils.copyFile(source, file);
-		return "D:\\Eclipse-Workspace\\SeleniumFrameworkDesign\\" +"reports\\" + testCaseName + ".png";
-	}
-	
 	@DataProvider
 	public Object[][] getData() throws IOException {
 		
